@@ -4,7 +4,7 @@
   "description": "",
   "main": "db.json",
   "scripts": {
-    "database": "json-server --watch db.json"
+    "database": "json-server -p 5000 --watch db.json"
   },
   "author": "Yorgos Kakavas",
   "license": "ISC",

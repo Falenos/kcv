@@ -6,7 +6,7 @@
   "scripts": {
     "app": "concurrently \"npm run database\" \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run server",
-    "client": "cd client && npm run client",
+    "client": "cd client && npm run start",
     "database": "cd database && npm run database"
   },
   "repository": {
