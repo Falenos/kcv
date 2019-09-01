@@ -1,0 +1,70 @@
+{
+    "addresses": [
+        {
+          "id": 1,
+          "streetName": "test",
+          "streetNumber": "test",
+          "zipCode": "test",
+          "city": "test",
+          "country": "test"
+        },
+        {
+          "streetName": "Nowiny",
+          "streetNumber": "14",
+          "zipCode": "62030",
+          "city": "Lubon",
+          "country": "Poland",
+          "id": 2
+        }
+    ],
+    "data": {
+        "name": "Yorgos A. Kakavas",
+        "address": "Grellstraße 7, Berlin, Germany",
+        "github": {
+            "name": "Falenos",
+            "url": "https://github.com/Falenos"
+        },
+        "summary": "With around 8 years of experience as a freelance website builder, developer and software engineer, I got involved in a variety of projects, facing different requirements and challenges. Writing applications in different ecosystems, facing a variety of real-life problems and following the vast diversity of community-driven web technologies and innovation, helps me to shape a versatile technical expertise with a higher view on connecting the pieces that form a solid web software solution ",
+        "skills": [
+            "JavaScript*",
+            "graphQL*",
+            "React.js*",
+            "Vue.js*",
+            "elastic search",
+            "Node.js*",
+            "Meteor.js*",
+            "REST standards",
+            "Microservises",
+            "Web Sockets",
+            "GIT*",
+            "Webpack*",
+            "jQuery",
+            "BEM",
+            "Agile Web Development*",
+            "SASS*",
+            "LESS*",
+            "HTML*",
+            "AngularJS",
+            "AJAX",
+            "SEO",
+            "Drupal",
+            "WordPress",
+            "Joomla",
+            "Prestashop"
+        ],
+        "experience": [
+            {
+                "position": "",
+                "companyName": "",
+                "companyUrl": "",
+                "period": {
+                    "start": "",
+                    "end": ""
+                },
+                "content": {
+
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "node index.js"
+  },
+  "author": "Yorgos Kakavas",
+  "license": "ISC"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "kcv",
+  "version": "1.0.0",
+  "description": "A simple cv creation editing and display app",
+  "main": "index.js",
+  "scripts": {
+    "app": "concurrently \"npm run database\" \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run server",
+    "client": "cd client && npm run client",
+    "database": "cd database && npm run database"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.kursez.com/ydrargyros/kcv.git"
+  },
+  "author": "Yorgos Kakavas",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
