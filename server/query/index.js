@@ -1,12 +1,22 @@
 const { GraphQLObjectType } = require('graphql');
 
-const address = require('./address');
-const addresses = require('./addresses');
+const getStatus = require('./getStatus');
+const getCV = require('./getCV');
+const getCVs = require('./getCVs');
+const getCVEntry = require('./getCVEntry');
+const getCVEntries = require('./getCVEntries');
+const getAddress = require('./getAddress');
+const getAddresses = require('./getAddresses');
 
 module.exports = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
-        address,
-        addresses,
+        getStatus,
+        getCV,
+        getCVs,
+        getCVEntry,
+        getCVEntries,
+        getAddress,
+        getAddresses,
     },
 });

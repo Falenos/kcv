@@ -1,4 +1,6 @@
 const axios = require('axios');
+const uuid = require('uuid');
+
 const { GraphQLString, GraphQLNonNull } = require('graphql');
 
 const AddressObjectType = require('./../object-types/address');
@@ -13,9 +15,10 @@ module.exports = {
         city: { type: GraphQLNonNull(GraphQLString) },
         country: { type: GraphQLNonNull(GraphQLString) },
     },
-    resolve(parentValue, args) {
-        return axios
+    resolve(parentValue, args, { isAuthenticated }) {
+        return isAuthenticated ? axios
             .post(`${dbHost}/addresses`, {
+                id: uuid.v4(),
                 streetName: args.streetName,
                 streetNumber: args.streetNumber,
                 zipCode: args.zipCode,
@@ -24,6 +27,7 @@ module.exports = {
             })
             .then(response => {
                 return response.data;
-            });
+            })
+            : {};
     },
 };

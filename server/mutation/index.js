@@ -1,14 +1,27 @@
 const { GraphQLObjectType } = require('graphql');
 
-const addAddress = require('./addAddress');
+const createCredentials = require('./createCredentials');
+const login = require('./login');
+
+const createAddress = require('./createAddress');
+const createCV = require('./createCV');
+
 const deleteAddress = require('./deleteAddress');
-const editAddress = require('./editAddress');
+const deleteCV = require('./deleteCV');
+
+const updateAddress = require('./updateAddress');
+const updateCV = require('./updateCV');
 
 module.exports = new GraphQLObjectType({
    name: 'Mutation',
    fields: {
-       addAddress,
+       login,
+       createCredentials,
+       createAddress,
+       createCV,
        deleteAddress,
-       editAddress,
+       deleteCV,
+       updateAddress,
+       updateCV,
    },
 });

@@ -7,7 +7,9 @@ const { dbHost } = require('./../settings');
 
 module.exports = {
     type: GraphQLList(AddressObjectType),
-    resolve(parentValue, args) {
-        return axios.get(`${dbHost}/addresses`).then(response => response.data);
+    resolve(parentValue, args, { isAuthenticated }) {
+        return isAuthenticated
+            ? axios.get(`${dbHost}/addresses`).then(response => response.data)
+            : {};
     }
 };

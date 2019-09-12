@@ -1,4 +1,3 @@
-
 const axios = require('axios');
 const { GraphQLString, GraphQLNonNull } = require('graphql');
 
@@ -10,11 +9,12 @@ module.exports = {
     args: {
         id: { type: GraphQLNonNull(GraphQLString) },
     },
-    resolve(parentValue, args) {
-        return axios
-            .delete(`${dbHost}/addresses/${args.id}`)
+    resolve(parentValue, args, { isAuthenticated }) {
+        return isAuthenticated ?
+            axios.delete(`${dbHost}/addresses/${args.id}`)
             .then(response => {
                 return response.data;
-            });
+            })
+            : {};
     },
 };

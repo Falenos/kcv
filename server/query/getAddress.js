@@ -9,14 +9,15 @@ module.exports = {
     args: {
         id: { type: GraphQLString }
     },
-    resolve(parentValue, args) {
-        return axios
-            .get(`${dbHost}/addresses/${args.id}`)
+    resolve(parentValue, args, { isAuthenticated }) {
+        return isAuthenticated ?
+            axios.get(`${dbHost}/addresses/${args.id}`)
             .then(response => {
                 return response.data;
             })
             .catch(response => {
                 return null;
-            });
+            })
+            : {};
     },
 };
