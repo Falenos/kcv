@@ -1,0 +1,14 @@
+.header {
+    background-color: #EEEEEE;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 20px;
+}
+
+.header-logo {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0 2rem;
+}

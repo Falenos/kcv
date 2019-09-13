@@ -5,6 +5,9 @@ class Address extends Component {
         return (
             <article>
                 <h3>{this.props.address.streetName}</h3>
+                <h3>{this.props.address.streetNumber}</h3>
+                <h3>{this.props.address.streetName}</h3>
+                <h3>{this.props.address.streetName}</h3>
             </article>
         );
     }

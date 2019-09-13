@@ -1,0 +1,13 @@
+.navigation {
+    display: block;
+}
+
+.navigation-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navigation-item {
+    margin-bottom: .3rem;
+}

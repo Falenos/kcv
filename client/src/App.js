@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-import Header from './components/core/Header/Header';
-import Footer from './components/core/Footer/Footer';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
-import Addresses from './components/molecules/Address/Addresses';
+import { BrowserRouter } from 'react-router-dom';
 
-const client = new ApolloClient({
-    uri: 'http://localhost:4000/graphql',
-});
+import { Header, Footer } from './components/organisms';
+import Routes from './components/pages';
 
 class App extends Component {
     render() {
         return (
-            <ApolloProvider client={client}>
+            <BrowserRouter>
                 <Header/>
 
-                <main>
-                    <Addresses></Addresses>
+                <main className="main">
+                    <Routes/>
                 </main>
 
                 <Footer/>
-            </ApolloProvider>
+            </BrowserRouter>
         );
     }
 }

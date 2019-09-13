@@ -2,13 +2,16 @@
   "name": "database",
   "version": "1.0.0",
   "description": "",
-  "main": "db.json",
+  "main": "index.js",
   "scripts": {
-    "database": "json-server -p 5000 --watch db.json"
+    "database": "node index.js && json-server -p 5000 db-container/db.json --fks dummy",
+    "database-clean": "NODE_DATABASE_RESET=yes node index.js && json-server -p 5000 db-container/db.json --fks dummy",
+    "database-dev": "NODE_DATABASE_RESET=yes node index.js && json-server -p 5000 db-container/db.json --fks dummy"
   },
   "author": "Yorgos Kakavas",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.15.0"
+    "json-server": "^0.15.0",
+    "nodemon": "^1.19.1"
   }
 }

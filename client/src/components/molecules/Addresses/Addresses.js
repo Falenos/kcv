@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
-import Address from './Address';
+import Query from 'react-apollo/Query';
+import Address from '../Address/Address';
 
 const ADDRESSES_QUERY = gql `
     {
@@ -26,10 +26,7 @@ class Addresses extends Component {
                     {
                         ({ loading, error, data }) => {
                             if (loading) return 'loading...';
-                            console.log(data, error);
-                            if (!data) {
-                                return null;
-                            }
+
                             return (
                                 <ul>
                                     {

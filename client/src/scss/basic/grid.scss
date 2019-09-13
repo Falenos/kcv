@@ -1,0 +1,11 @@
+.main {
+    padding: 2rem;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: [vertical-line-1] 200px [vertical-line-2] auto [vertical-line-3];
+    grid-template-rows: [horizontal-line-1] auto [horizontal-line-2] 30px [horizontal-line-3];
+    width: 100vw;
+    height: 100vh;
+}
