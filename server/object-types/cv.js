@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const CVEntry = require('./CVEntry');
+const CVEntry = require('./cvEntry');
 const { dbHost } = require('../settings');
 
 const {

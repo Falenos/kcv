@@ -1,0 +1,15 @@
+version: "3.2"
+
+services:
+  app:
+    image: node:12
+    volumes:
+      - ./:/var/www/kcv
+    working_dir: /var/www/kcv
+    command: bash
+    entrypoint: ""
+    user: node
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+      - "5000:5000"

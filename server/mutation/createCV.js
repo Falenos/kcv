@@ -4,7 +4,7 @@ const uuid = require('uuid');
 const { GraphQLID, GraphQLString, GraphQLNonNull } = require('graphql');
 const { GraphQLDate } = require('graphql-iso-date');
 
-const CVObjectType = require('../object-types/CV');
+const CVObjectType = require('../object-types/cv');
 const { dbHost } = require('../settings');
 
 module.exports = {
